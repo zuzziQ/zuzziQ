@@ -32,14 +32,14 @@ I develop using **Lean SDLC 2.0**: single-agent first orchestration, zero blind 
 
 All systems below are actively deployed and available for live preview:
 
-| Application | Live URL | Core Tech Stack | Architectural Role & Scope |
-|:---|:---|:---|:---|
-| **StorymeeTeam Portal** | 🚀 [storymee-team.vercel.app](https://storymee-team.vercel.app) | Next.js 16 (Turbopack), Fastify, PostgreSQL | Enterprise internal OS, real-time ZKTeco biometric attendance, PlIssue Kanban |
-| **World Asset Management (WAM)** | 🎨 [world-assets.vercel.app](https://world-assets.vercel.app) | React, Vite, Blender MCP, `core-asset-api` | Project Command Center, Character DNA, World Bible Matrix, 2D-to-3D asset pipeline |
-| **Storyboard Workflow** | 🎬 [storyboard-workflow.vercel.app](https://storyboard-workflow.vercel.app) | Node Canvas, Next.js, AI Storyboard Engine | Visual shot planner, prompt continuity keyframing for AI filmmaking |
-| **AIKids EdTech Platform** | 🎮 [app.aikid.vn](https://app.aikid.vn) | Next.js 14 App Router, TailwindCSS | Interactive gamified learning client with child psychology stimulus guardrails |
-| **AI-Task-Manager Bot** | 🤖 [t.me/StoryMeeBot](https://t.me/StoryMeeBot) (Live Bot) · [Repo](https://github.com/zuzziQ/AI-Task-Manager) | Python 3.11, Google Gemini, Plane.so API | Telegram bot điều phối task tự động, dual-loop review state machine & Sheets sync |
-| **Universal AI Extension** | ⚡ [GitHub Repository](https://github.com/zuzziQ/universal-ai-extension) | TypeScript, Chrome MV3, Cloudflare R2 | Headless multi-provider automation for Dreamina, Google Flow, and Higgsfield |
+| Application | Live Production URL | GitHub Repository | Core Tech Stack | Architectural Role & Scope |
+|:---|:---:|:---:|:---|:---|
+| **StorymeeTeam Portal** | 🚀 [storymee-team.vercel.app](https://storymee-team.vercel.app) | 📦 [zuzziQ/storymee-team](https://github.com/zuzziQ/storymee-team) | Next.js 16 (Turbopack), Fastify, PostgreSQL | Enterprise internal OS, real-time ZKTeco biometric attendance, PlIssue Kanban |
+| **World Asset Management (WAM)** | 🎨 [world-assets.vercel.app](https://world-assets.vercel.app) | 📦 [zuzziQ/world-asset](https://github.com/zuzziQ/world-asset) | React, Vite, Blender MCP, `core-asset-api` | Project Command Center, Character DNA, World Bible Matrix, 2D-to-3D asset pipeline |
+| **Storyboard Workflow** | 🎬 [storyboard-workflow.vercel.app](https://storyboard-workflow.vercel.app) | 📦 [zuzziQ/storyboard-workflow](https://github.com/zuzziQ/storyboard-workflow) | Node Canvas, Next.js, AI Storyboard Engine | Visual shot planner, prompt continuity keyframing for AI filmmaking |
+| **AIKids EdTech Platform** | 🎮 [app.aikid.vn](https://app.aikid.vn) | 📦 [zuzziQ/aikids-edtech-web](https://github.com/zuzziQ/aikids-edtech-web) | Next.js 14 App Router, TailwindCSS | Interactive gamified learning client with child psychology stimulus guardrails |
+| **AI-Task-Manager Bot** | 🤖 [t.me/StoryMeeBot](https://t.me/StoryMeeBot) *(Live Bot)* | 📦 [zuzziQ/AI-Task-Manager](https://github.com/zuzziQ/AI-Task-Manager) | Python 3.11, Google Gemini, Plane.so API | Telegram bot điều phối task tự động, dual-loop review state machine & Sheets sync |
+| **Universal AI Extension** | ⚡ [Direct Live Install](https://github.com/zuzziQ/universal-ai-extension) (MV3) | 📦 [zuzziQ/universal-ai-extension](https://github.com/zuzziQ/universal-ai-extension) | TypeScript, Chrome MV3, Cloudflare R2 | Headless multi-provider automation for Dreamina, Google Flow, and Higgsfield |
 
 ---
 
