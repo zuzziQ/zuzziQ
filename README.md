@@ -7,6 +7,8 @@
 
 <p align="center">
   <a href="https://storymee-team.vercel.app"><img src="https://img.shields.io/badge/Live_Portal-StorymeeTeam-3b82f6?style=for-the-badge&logo=vercel&logoColor=white" alt="StorymeeTeam Portal"/></a>
+  <a href="https://github.com/zuzziQ/storymee-backend-core"><img src="https://img.shields.io/badge/Backend_Core-12_Fastify_APIs-000000?style=for-the-badge&logo=fastify&logoColor=white" alt="StoryMee Backend Core"/></a>
+  <a href="https://github.com/zuzziQ/auto-facebook-ads"><img src="https://img.shields.io/badge/Auto_Ads-Meta_Decision_Center-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Auto Facebook Ads"/></a>
   <a href="https://world-assets.vercel.app"><img src="https://img.shields.io/badge/Live_Studio-World_Assets_(WAM)-8b5cf6?style=for-the-badge&logo=blender&logoColor=white" alt="World Assets WAM"/></a>
   <a href="https://storyboard-workflow.vercel.app"><img src="https://img.shields.io/badge/Live_App-Storyboard_Workflow-ec4899?style=for-the-badge&logo=node.js&logoColor=white" alt="Storyboard Workflow"/></a>
   <a href="https://app.aikid.vn"><img src="https://img.shields.io/badge/Live_Web-AIKids_EdTech-10b981?style=for-the-badge&logo=safari&logoColor=white" alt="AIKids LMS"/></a>
@@ -34,6 +36,8 @@ All systems below are actively deployed and available for live preview:
 
 | Application | Live Production URL | GitHub Repository | Core Tech Stack | Architectural Role & Scope |
 |:---|:---:|:---:|:---|:---|
+| **StoryMee Backend Core** | ⚡ [dev-hub.storymee.com](https://dev-hub.storymee.com) *(Gateway)* | 📦 [zuzziQ/storymee-backend-core](https://github.com/zuzziQ/storymee-backend-core) | Fastify, Go Gateway (:5100), Prisma SSOT, NATS | Enterprise microservices mesh (12 Fastify APIs), transactional outbox & event streaming |
+| **Auto Facebook Ads** | 📈 [Decision Center Live](https://github.com/zuzziQ/auto-facebook-ads) *(Ad Optimizer)* | 📦 [zuzziQ/auto-facebook-ads](https://github.com/zuzziQ/auto-facebook-ads) | Next.js, Meta Marketing API, MCP, Rule Engine | AI-powered multi-tenant ads automation, creative fatigue analysis & automated scaling |
 | **StorymeeTeam Portal** | 🚀 [storymee-team.vercel.app](https://storymee-team.vercel.app) | 📦 [zuzziQ/storymee-team](https://github.com/zuzziQ/storymee-team) | Next.js 16 (Turbopack), Fastify, PostgreSQL | Enterprise internal OS, real-time ZKTeco biometric attendance, PlIssue Kanban |
 | **World Asset Management (WAM)** | 🎨 [world-assets.vercel.app](https://world-assets.vercel.app) | 📦 [zuzziQ/world-asset](https://github.com/zuzziQ/world-asset) | React, Vite, Blender MCP, `core-asset-api` | Project Command Center, Character DNA, World Bible Matrix, 2D-to-3D asset pipeline |
 | **Storyboard Workflow** | 🎬 [storyboard-workflow.vercel.app](https://storyboard-workflow.vercel.app) | 📦 [zuzziQ/storyboard-workflow](https://github.com/zuzziQ/storyboard-workflow) | Node Canvas, Next.js, AI Storyboard Engine | Visual shot planner, prompt continuity keyframing for AI filmmaking |
@@ -180,6 +184,15 @@ The StoryMee V2 ecosystem is engineered with strict separation of concerns, zero
       <img src="https://img.shields.io/badge/World_Asset_Studio-8B5CF6?style=flat-square&logo=unity&logoColor=white" />
       <img src="https://img.shields.io/badge/2D--to--3D_Pipeline-10B981?style=flat-square&logo=three.js&logoColor=white" />
       <img src="https://img.shields.io/badge/Storyboard_Engine-EC4899?style=flat-square&logo=figma&logoColor=white" />
+    </td>
+  </tr>
+  <tr>
+    <td><b>Marketing & Ads Automation</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/Meta_Marketing_API-1877F2?style=flat-square&logo=meta&logoColor=white" />
+      <img src="https://img.shields.io/badge/Facebook_Ads_MCP-0080FF?style=flat-square&logo=facebook&logoColor=white" />
+      <img src="https://img.shields.io/badge/Rule_Engine_(CPMess%2FCPL%2FCPP)-10B981?style=flat-square&logo=target&logoColor=white" />
+      <img src="https://img.shields.io/badge/Creative_Optimizer_LLM-6366F1?style=flat-square&logo=openai&logoColor=white" />
     </td>
   </tr>
   <tr>
