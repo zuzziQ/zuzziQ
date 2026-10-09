@@ -228,11 +228,24 @@ The StoryMee V2 ecosystem is engineered with strict separation of concerns, zero
 
 ---
 
-## 📊 GitHub Analytics & Engineering Activity
+## 📊 Engineering Velocity & Production Activity
 
+### 📈 StoryMee Ecosystem Operational Metrics & Scale
+A quantitative overview of the distributed systems, autonomous agents, and microservices engineered and maintained across the ecosystem:
+
+| Production Dimension | Current Scale | Architectural Scope & Implementation |
+|:---|:---:|:---|
+| **Distributed Microservices** | **12 APIs + 1 Gateway** | Media, Account, Team, Asset, Job, Billing, Worker-Pool, LMS, Gamification, Notification, AI, and Go Gateway (:5100) |
+| **Active Live Harnesses** | **5 Production Apps** | StorymeeTeam Portal, World Asset Studio (WAM), Storyboard Canvas, AIKids EdTech, and Telegram Bot |
+| **Hardware Biometric Ingestion** | **600+ Real Events** | Real-time TCP/IP biometric sync from physical ZKTeco hardware to PostgreSQL database |
+| **Ground-Truth Code Anchors** | **100+ AST Nodes** | Deterministic symbol-to-line links (`symbol @ file:line`) powering SOTA Vertical-Tree RAG |
+| **Event Bus Throughput** | **Sub-millisecond** | Persistent NATS JetStream message streaming with zero-loss transactional outbox pattern |
+
+### 💻 GitHub Activity & Language Velocity
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=zuzziQ&show_icons=true&theme=radical&hide_border=true" height="175" alt="GitHub Stats" />
+<img src="https://github-readme-stats.vercel.app/api?username=zuzziQ&show_icons=true&theme=radical&hide_border=true&hide_rank=true" height="175" alt="GitHub Stats" />
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=zuzziQ&theme=radical&hide_border=true" height="175" alt="GitHub Streak" />
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=zuzziQ&layout=compact&theme=radical&hide_border=true" height="175" alt="Top Languages" />
 
 </div>
