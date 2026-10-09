@@ -24,7 +24,7 @@
 
 I am an **AI Systems & Autonomous Agent Developer** specializing in building and operating production-grade **autonomous multi-agent swarms**, **AST-grounded code intelligence**, and **high-throughput distributed microservices**.
 
-My flagship architecture is the **StoryMee V2 Platform** — an end-to-end ecosystem integrating **Google Antigravity SDK & IDE**, **Anthropic Claude 3.5 Sonnet**, and **Codex** with a high-performance Go Gateway (:5100), 12 domain-isolated Fastify microservices (:4501–:4600), NATS JetStream event streaming, and Prisma ORM data synchronization.
+My flagship architecture is the **StoryMee V2 Platform** — an end-to-end ecosystem integrating autonomous coding agents with a high-performance Go Gateway (:5100), domain-isolated Fastify services, NATS JetStream event streaming, and a shared Prisma data contract.
 
 I develop using **Lean SDLC 2.0**: single-agent first orchestration, zero blind code searching, strict sub-agent handoff contracts, and self-healing inner verification loops.
 
@@ -39,11 +39,12 @@ All systems below are actively deployed and available for live preview:
 | **StoryMee Backend Core** | ⚡ [dev-hub.storymee.com](https://dev-hub.storymee.com) *(Gateway)* | 📦 [zuzziQ/storymee-backend-core](https://github.com/zuzziQ/storymee-backend-core) | Fastify, Go Gateway (:5100), Prisma SSOT, NATS | Enterprise microservices mesh (12 Fastify APIs), transactional outbox & event streaming |
 | **Auto Facebook Ads** | 📈 [Decision Center Live](https://github.com/zuzziQ/auto-facebook-ads) *(Ad Optimizer)* | 📦 [zuzziQ/auto-facebook-ads](https://github.com/zuzziQ/auto-facebook-ads) | Next.js, Meta Marketing API, MCP, Rule Engine | AI-powered multi-tenant ads automation, creative fatigue analysis & automated scaling |
 | **StorymeeTeam Portal** | 🚀 [storymee-team.vercel.app](https://storymee-team.vercel.app) | 📦 [zuzziQ/storymee-team](https://github.com/zuzziQ/storymee-team) | Next.js 16 (Turbopack), Fastify, PostgreSQL | Enterprise internal OS, real-time ZKTeco biometric attendance, PlIssue Kanban |
-| **World Asset Management (WAM)** | 🎨 [world-assets.vercel.app](https://world-assets.vercel.app) | 📦 [zuzziQ/world-asset](https://github.com/zuzziQ/world-asset) | React, Vite, Blender MCP, `core-asset-api` | Project Command Center, Character DNA, World Bible Matrix, 2D-to-3D asset pipeline |
+| **World Asset Management (WAM)** | 🎨 [world-assets.vercel.app](https://world-assets.vercel.app) | 📦 [zuzziQ/world-asset](https://github.com/zuzziQ/world-asset) | React, Vite, Gateway APIs, Blender MCP | Project Command Center, Character DNA, World Bible Matrix, 2D-to-3D asset pipeline |
 | **Storyboard Workflow** | 🎬 [storyboard-workflow.vercel.app](https://storyboard-workflow.vercel.app) | 📦 [zuzziQ/storyboard-workflow](https://github.com/zuzziQ/storyboard-workflow) | Node Canvas, Next.js, AI Storyboard Engine | Visual shot planner, prompt continuity keyframing for AI filmmaking |
-| **AIKids EdTech Platform** | 🎮 [app.aikid.vn](https://app.aikid.vn) | 📦 [zuzziQ/aikids-edtech-web](https://github.com/zuzziQ/aikids-edtech-web) | Next.js 14 App Router, TailwindCSS | Interactive gamified learning client with child psychology stimulus guardrails |
+| **AIKids EdTech Platform** | 🎮 [app.aikid.vn](https://app.aikid.vn) | 📦 [zuzziQ/aikids-edtech-web](https://github.com/zuzziQ/aikids-edtech-web) | React, TypeScript, Vite, domain APIs | Production learning platform organized around LMS, jobs, media, identity, billing, and gamification |
 | **AI-Task-Manager Bot** | 🤖 [t.me/StoryMeeBot](https://t.me/StoryMeeBot) *(Live Bot)* | 📦 [zuzziQ/AI-Task-Manager](https://github.com/zuzziQ/AI-Task-Manager) | Python 3.11, Google Gemini, Plane.so API | Telegram bot điều phối task tự động, dual-loop review state machine & Sheets sync |
 | **Universal AI Extension** | ⚡ [Direct Live Install](https://github.com/zuzziQ/universal-ai-extension) (MV3) | 📦 [zuzziQ/universal-ai-extension](https://github.com/zuzziQ/universal-ai-extension) | TypeScript, Chrome MV3, Cloudflare R2 | Headless multi-provider automation for Dreamina, Google Flow, and Higgsfield |
+| **Higgsfield Multi-Studio** | Private operations app | 🔒 Private repository | React, Vite, Chrome MV3, Node.js | Multi-account authentication, synchronized media jobs, and batch production control |
 
 ---
 
@@ -57,7 +58,7 @@ The StoryMee V2 ecosystem is engineered with strict separation of concerns, zero
 │  • StorymeeTeam Portal: Next.js 16 Turbopack, Biometric Attendance Hardware Sync, Dark Glass UI  │
 │  • World Asset Studio (WAM): Character DNA, World Bible Matrix & Blender MCP 2D-to-3D Pipeline   │
 │  • Storyboard Workflow: Visual node graph shot planner & prompt narrative continuity             │
-│  • AIKids EdTech Web: Gamified Next.js Client + Child Psychology Stimulus Guardrails             │
+│  • AIKids EdTech Web: React/Vite learning client + child-safe experience guardrails              │
 │  • Universal AI Extension: Chrome MV3 Headless Automation (Dreamina, Google Flow, Higgsfield)    │
 │  • AI-Task-Manager Bot: Telegram Asynchronous Dispatcher + Gemini LLM + Plane.so API             │
 └────────────────────────────────────────────────┬─────────────────────────────────────────────────┘
@@ -76,7 +77,7 @@ The StoryMee V2 ecosystem is engineered with strict separation of concerns, zero
 │  • core-account-api (:4502): JWT actors, workspaces (ipId), Mobile Family (Parent/Child + PIN)   │
 │  • core-team-api (:4503): StorymeeTeam HR biometric attendance, payroll, and PlIssue Kanban     │
 │  • core-system-api (:4504): Platform configurations, radar health monitoring & telemetry        │
-│  • core-asset-api (:4505): World Asset Management (WAM) engine, 2D-to-3D assets & character DNA │
+│  • Project assets: owned through explicit media/job/project contracts behind the Gateway        │
 │  • core-job-api (:4506): Distributed job queuing, Vertex ADC dispatch, worker execution state   │
 │  • core-billing-api (:4507): Partner keys, multi-tier quota & multi-gateway payments            │
 │  • core-worker-pool-api (:4508): Headless browser session pool, cookie rotation, native LLM keys │
@@ -109,7 +110,7 @@ The StoryMee V2 ecosystem is engineered with strict separation of concerns, zero
 ### 📱 Tier 1: Intelligent Client Harnesses & Headless Automations
 * **Decoupled Client Ecosystem**: Every front-facing harness targets dedicated personas without domain bleeding.
 * **StorymeeTeam Portal ([Live](https://storymee-team.vercel.app))**: High-density Dark Glass SaaS built on **Next.js 16 (Turbopack)** and React 19 Server Components. Integrates physical ZKTeco attendance biometrics via automated push protocols, PlIssue review state machines, and HR leave calculations.
-* **World Asset Management Studio ([Live](https://world-assets.vercel.app))**: The creative command center for generative animation directors. Houses character turnarounds, color scripts, and coordinates 2D-to-3D mesh conversions via **Blender MCP**.
+* **World Asset Management Studio ([Live](https://world-assets.vercel.app))**: The creative command center for generative animation directors. Houses character turnarounds, color scripts, and coordinates 2D-to-3D mesh conversions via **Blender MCP** while using the unified Gateway contract.
 * **Storyboard Workflow ([Live](https://storyboard-workflow.vercel.app))**: Node-based visual canvas orchestrating scene-to-shot breakdowns, prompt keyframing, and multi-scene character continuity.
 * **Universal AI Extension**: Manifest V3 Chrome Extension executing headless browser automations across Dreamina, Google Flow, and Higgsfield with resilient session management and direct Cloudflare R2 asset streaming.
 * **AI-Task-Manager Bot**: Natural language task router parsing Telegram commands into structured Plane.so issues and Google Sheets dashboards via Google Gemini (Gemma 4 31B).
@@ -131,7 +132,7 @@ The StoryMee V2 ecosystem is engineered with strict separation of concerns, zero
 * **Domain Ownership & Strict Isolation**: 12 dedicated Fastify microservices built with TypeScript. Services never write to foreign database tables directly; cross-boundary interactions occur strictly via contract APIs or NATS JetStream events.
 * **Worker Pool & Account Rotation (`core-worker-pool-api` :4508)**: Isolates browser session cookies, account pool allocations, and native LLM API keys from standard user identities in `core-account-api`.
 * **Centralized Job Engine (`core-job-api` :4506)**: Manages stateful asynchronous job lifecycles with idempotency guarantees and automatic sweeper routines for failed jobs.
-* **AI Creative Spine (`core-asset-api` :4505 & `core-media-api` :4501)**: Coordinates narrative scripts, character DNA matrices, and asset generation pipelines.
+* **AI Creative Spine**: Separates media generation, distributed jobs, project assets, and LMS ownership into explicit domain contracts behind the Gateway.
 
 ---
 
