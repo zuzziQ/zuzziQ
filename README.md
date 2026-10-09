@@ -19,11 +19,11 @@
 
 ## 📌 Executive Summary
 
-I am an **AI Systems & Autonomous Agent Developer** focused on building and shipping production-grade **multi-agent swarms**, **AST-grounded code intelligence**, and **SOTA Vertical-Tree Retrieval-Augmented Generation (RAG)** systems.
+I am an **AI Systems & Autonomous Agent Developer** specializing in building and operating production-grade **autonomous multi-agent swarms**, **AST-grounded code intelligence**, and **high-throughput distributed microservices**.
 
-I build across the full agentic stack — from orchestrating autonomous workflows using **Google Antigravity SDK & IDE**, **Anthropic Claude 3.5 Sonnet**, and **Codex**, down to high-throughput distributed microservices (Go Gateway :5100, 12 Fastify services, NATS JetStream, PostgreSQL + Prisma ORM) and rich interactive client portals (Next.js 16 Dark Glass, World Asset Studio, and Telegram bots).
+My flagship architecture is the **StoryMee V2 Platform** — an end-to-end ecosystem integrating **Google Antigravity SDK & IDE**, **Anthropic Claude 3.5 Sonnet**, and **Codex** with a high-performance Go Gateway (:5100), 12 domain-isolated Fastify microservices (:4501–:4600), NATS JetStream event streaming, and Prisma ORM data synchronization.
 
-My development workflow follows **Lean SDLC 2.0**: single-agent first, zero blind searching, strict sub-agent handoff contracts, and self-healing inner verification loops.
+I develop using **Lean SDLC 2.0**: single-agent first orchestration, zero blind code searching, strict sub-agent handoff contracts, and self-healing inner verification loops.
 
 ---
 
@@ -31,7 +31,7 @@ My development workflow follows **Lean SDLC 2.0**: single-agent first, zero blin
 
 All systems below are actively deployed and available for live preview:
 
-| Application | Live URL | Core Tech Stack | Purpose & Domain |
+| Application | Live URL | Core Tech Stack | Architectural Role & Scope |
 |:---|:---|:---|:---|
 | **StorymeeTeam Portal** | 🚀 [storymee-team.vercel.app](https://storymee-team.vercel.app) | Next.js 16 (Turbopack), Fastify, PostgreSQL | Enterprise internal OS, real-time ZKTeco biometric attendance, PlIssue Kanban |
 | **World Asset Management (WAM)** | 🎨 [world-assets.vercel.app](https://world-assets.vercel.app) | React, Vite, Blender MCP, `core-asset-api` | Project Command Center, Character DNA, World Bible Matrix, 2D-to-3D asset pipeline |
@@ -42,194 +42,115 @@ All systems below are actively deployed and available for live preview:
 
 ---
 
-## 🏗️ System Architecture: The StoryMee V2 AI Platform
+## 🏛️ Comprehensive System Architecture: The 5-Tier Blueprint
+
+The StoryMee V2 ecosystem is engineered with strict separation of concerns, zero cross-database pollution, and deterministic agent-to-tool routing:
 
 ```
 ┌──────────────────────────────────────────────────────────────────────────────────────────────────┐
-│                             1. AGENTIC ORCHESTRATION PLANE                                       │
-│   • Google Antigravity SDK & IDE (Supreme Orchestrator) • Claude 3.5 Sonnet & Codex Workflows    │
-│   • Sub-Agent Swarms: @BE-agent · @FE-agent · @QA-agent · @Bug-agent · @Ops-agent · @Psych-agent │
-│   • Execution Engine: Lean SDLC 2.0 (Thinking ➔ Acting ➔ Observing [Inner Loop] ➔ Reflecting)   │
+│                         TIER 1: INTELLIGENT CLIENT HARNESSES & AUTOMATIONS                       │
+│  • StorymeeTeam Portal: Next.js 16 Turbopack, Biometric Attendance Hardware Sync, Dark Glass UI  │
+│  • World Asset Studio (WAM): Character DNA, World Bible Matrix & Blender MCP 2D-to-3D Pipeline   │
+│  • Storyboard Workflow: Visual node graph shot planner & prompt narrative continuity             │
+│  • AIKids EdTech Web: Gamified Next.js Client + Child Psychology Stimulus Guardrails             │
+│  • Universal AI Extension: Chrome MV3 Headless Automation (Dreamina, Google Flow, Higgsfield)    │
+│  • AI-Task-Manager Bot: Telegram Asynchronous Dispatcher + Gemini LLM + Plane.so API             │
 └────────────────────────────────────────────────┬─────────────────────────────────────────────────┘
-                                                 │ Tool Calling via Model Context Protocol (MCP)
+                                                 │ HTTPS / WSS / REST
 ┌────────────────────────────────────────────────▼─────────────────────────────────────────────────┐
-│                           2. CONTEXT, CODE INTELLIGENCE & SOTA RAG                                │
-│   • SOTA Vertical-Tree RAG: LlamaIndex Data Plane + LangGraph StateGraph Control Plane           │
-│   • HNSW Vector Search: PostgreSQL + pgvector (rag_tree_nodes)                                   │
-│   • Ground-Truth Code Anchors: symbol @ file:line for instant deterministic code jump            │
-│   • CodeGraph MCP: AST Parsing, Caller/Callee Graph, Blast Radius & Affected Tests Analytics     │
-│   • Continuous Learning: Incident lesson recorder (storymee_rag_record_lesson) & DPO alignment   │
+│                     TIER 2: UNIFIED EDGE GATEWAY & TRAFFIC INGRESS (storymee-hub :5100)          │
+│  • Engine: High-concurrency Golang Gateway • Zero Direct Microservice Port Exposure              │
+│  • Prefix Routing: /v1/* (Public) · /internal/v1/* (Web/Mobile) · /worker/v1/* (Desktop Workers) │
+│  • Security & Policy: Edge Guard JWT Verification, Redis Blacklist Revocation, Dynamic RPM Burst │
+│  • Extension Tunnel: /v1/media/gflow-extension/ws (Persistent bidirectional WebSocket)           │
 └────────────────────────────────────────────────┬─────────────────────────────────────────────────┘
-                                                 │ Event Bus & Edge Routing
+                                                 │ Internal Zero-Trust Transport
 ┌────────────────────────────────────────────────▼─────────────────────────────────────────────────┐
-│                      3. DISTRIBUTED MICROSERVICES & CLOUD INFRASTRUCTURE                         │
-│   • Edge Gateway: storymee-hub (:5100 in Go) — JWT Guard, Redis Revocation, Caching & Ingress    │
-│   • 12 Fastify APIs (:4501–:4600):                                                               │
-│       media:4501 · account:4502 · team:4503 · system:4504 · asset:4505 (World Asset Studio)     │
-│       job:4506 · billing:4507 · worker-pool:4508 · lms:4509 · notification:4512 · ai:4600       │
-│   • Asynchronous Message Bus: NATS JetStream (Persistent Outbox Pattern)                         │
-│   • SSOT Database: PostgreSQL + PgBouncer + Prisma Schema (0-Shared-Libs)                        │
-│   • Asset Pipeline: Cloudflare R2 Object Storage + Cloudflare Zero Trust Tunnels                 │
-└────────────────────────────────────────────────┬─────────────────────────────────────────────────┘
-                                                 │ Client Contracts
-┌────────────────────────────────────────────────▼─────────────────────────────────────────────────┐
-│                               4. PRODUCTION HARNESS CLIENTS                                      │
-│   • StorymeeTeam Portal: Next.js 16 Turbopack, Biometric Attendance Hardware Sync, Dark Glass UI │
-│   • World Asset Studio (WAM): Character DNA, World Bible Matrix & Blender MCP 2D-to-3D Pipeline  │
-│   • Storyboard Workflow (Flow Architect): Visual node graph shot planner & narrative continuity   │
-│   • AI-Task-Manager: Telegram Bot + Google Gemini + Plane.so API + Dual-Loop Review Engine       │
-│   • Universal AI Extension: Chrome MV3 Headless Automation (Dreamina, Google Flow, Higgsfield)   │
-│   • AIKids EdTech Web: Gamified Next.js Client + Child Psychology Stimulus Guardrails            │
-└──────────────────────────────────────────────────────────────────────────────────────────────────┘
+│                     TIER 3: DOMAIN-DRIVEN FASTIFY MICROSERVICES (:4501–:4600)                    │
+│  • core-media-api (:4501): Generation pipelines for scripts, scenes, and video assets           │
+│  • core-account-api (:4502): JWT actors, workspaces (ipId), Mobile Family (Parent/Child + PIN)   │
+│  • core-team-api (:4503): StorymeeTeam HR biometric attendance, payroll, and PlIssue Kanban     │
+│  • core-system-api (:4504): Platform configurations, radar health monitoring & telemetry        │
+│  • core-asset-api (:4505): World Asset Management (WAM) engine, 2D-to-3D assets & character DNA │
+│  • core-job-api (:4506): Distributed job queuing, Vertex ADC dispatch, worker execution state   │
+│  • core-billing-api (:4507): Partner keys, multi-tier quota & multi-gateway payments            │
+│  • core-worker-pool-api (:4508): Headless browser session pool, cookie rotation, native LLM keys │
+│  • core-lms-api (:4509): Curriculum tree, Aiki Islands, interactive classroom progression       │
+│  • core-notification-api (:4512): Real-time inbox state, multi-channel push dispatcher           │
+│  • core-gamification-api (:4513): Gamification mechanics, point transactions, streaks, badges    │
+│  • core-ai-api (:4600): Team AI assistant, LangGraph agent workflows, prompt routing             │
+└───────────────────────┬──────────────────────────────────────────────────┬───────────────────────┘
+                        │ Asynchronous Events                              │ SSOT Database Queries
+┌───────────────────────▼──────────────────────────┐   ┌───────────────────▼───────────────────────┐
+│     TIER 4: EVENT STREAMING & DATA PLANE         │   │  TIER 5: AUTONOMOUS AGENT & SOTA CONTEXT  │
+│ • Message Bus: NATS JetStream (-sd /data)        │   │ • Orchestrator: Antigravity SDK & IDE     │
+│   Transactional Outbox Pattern & Zero Message    │   │ • Reasoning: Claude 3.5 Sonnet & Codex    │
+│   Loss for async job dispatching                 │   │ • Agent Swarms: @BE · @FE · @QA · @Bug    │
+│ • Database SSOT: PostgreSQL + PgBouncer          │   │   @Ops · @Design · @Creative · @Psych     │
+│   Schema centralized at 0-Shared-Libs/prisma     │   │ • SOTA Vertical-Tree RAG:                 │
+│ • Cache & Revocation: Redis In-Memory Store      │   │   - LlamaIndex Data Plane (RAPTOR trees)  │
+│ • Cloud Storage: Cloudflare R2 Object Storage    │   │   - LangGraph StateGraph Control Plane    │
+│   with global CDN edge + Cloudflare Tunnels      │   │   - PostgreSQL + pgvector (HNSW index)    │
+│                                                  │   │   - Code Anchors: symbol @ file:line      │
+│                                                  │   │ • CodeGraph MCP: AST Blast Radius, Flow   │
+│                                                  │   │   tracing, & affected_tests discovery     │
+└──────────────────────────────────────────────────┘   └───────────────────────────────────────────┘
 ```
 
 ---
 
-## ⚡ Core Engineering Pillars & Specializations
+## 🔍 In-Depth Architectural Breakdown by Tier
 
-### 🤖 1. Autonomous Multi-Agent Swarms & Antigravity Orchestration
-* **Antigravity SDK & IDE Orchestration**: Custom skills, dynamic context injection, and system rules to guide autonomous agents through complex multi-repository refactors and deployments.
-* **Lean SDLC 2.0 Pipeline**:
-  1. **Thinking**: Traverses the Vertical-Tree RAG router in a single hop, locating canonical SSOT files and exact code anchors without blind searching.
-  2. **Acting**: Single-agent first execution; delegates to specialized sub-agents only when parallel decoupled branches exist.
-  3. **Observing (Evidence-Based with Inner Loop)**: Executes targeted tests or AST diff checks. If tests fail, the agent autonomously invokes an internal repair loop (up to 2 retries) before surfacing results.
-  4. **Reflecting**: Produces concise handoff deliverables ($\le 5$ lines) documenting modified files, verified commands, and remaining risks.
-* **Specialized Agent Swarms**:
-  * `@BE-agent`: Fastify microservices, Go Gateway, Prisma ORM, NATS JetStream.
-  * `@FE-agent`: Next.js 16 App Router, React Server Components, TailwindCSS Dark Glass.
-  * `@QA-agent`: Focused regression testing and boundary condition verification.
-  * `@Bug-agent`: AST-level syntax repair, bracket balancing, and deep root cause analysis (RCA).
-  * `@Ops-agent`: Docker container orchestration, process garbage collection (`resource-purger`), VPS runtime rescue.
-  * `@Psych-agent`: Advisory child psychology agent monitoring cognitive load and stimulus thresholds for edtech apps.
-* **Strict Token Economy**: Zero history re-copying, handoff contracts under 5 lines, and offloaded scratch logging to preserve context windows.
+### 📱 Tier 1: Intelligent Client Harnesses & Headless Automations
+* **Decoupled Client Ecosystem**: Every front-facing harness targets dedicated personas without domain bleeding.
+* **StorymeeTeam Portal ([Live](https://storymee-team.vercel.app))**: High-density Dark Glass SaaS built on **Next.js 16 (Turbopack)** and React 19 Server Components. Integrates physical ZKTeco attendance biometrics via automated push protocols, PlIssue review state machines, and HR leave calculations.
+* **World Asset Management Studio ([Live](https://world-assets.vercel.app))**: The creative command center for generative animation directors. Houses character turnarounds, color scripts, and coordinates 2D-to-3D mesh conversions via **Blender MCP**.
+* **Storyboard Workflow ([Live](https://storyboard-workflow.vercel.app))**: Node-based visual canvas orchestrating scene-to-shot breakdowns, prompt keyframing, and multi-scene character continuity.
+* **Universal AI Extension**: Manifest V3 Chrome Extension executing headless browser automations across Dreamina, Google Flow, and Higgsfield with resilient session management and direct Cloudflare R2 asset streaming.
+* **AI-Task-Manager Bot**: Natural language task router parsing Telegram commands into structured Plane.so issues and Google Sheets dashboards via Google Gemini (Gemma 4 31B).
 
 ---
 
-### 🧠 2. Claude, Codex & Model Context Protocol (MCP) Fleet
-* **High-Reasoning LLM Routing**: Leveraging Anthropic Claude 3.5 Sonnet and Gemini Pro for deep architectural design and AST refactoring; routing syntax/linter tasks to lightweight models.
-* **Production MCP Server Fleet**:
-  * `storymee-rag-mcp`: Exposes instant domain SSOT search, microservice port registries, secrets inventories, and incident lesson recording.
-  * `codegraph-mcp`: Exposes full-repo AST parsing, bidirectional caller/callee graphs, and blast radius preview.
-  * `blender-mcp`: Exposes 3D asset generation, scene inspection, and 2D-to-3D turnaround execution for World Asset Management.
-  * `chrome-devtools-mcp`: Enables headless DOM evaluation, network waterfall auditing, and visual layout assertions.
-  * `artemis`: Mobile UI automation and end-to-end device testing.
+### 🛡️ Tier 2: Unified Edge Gateway & Traffic Ingress (`storymee-hub` :5100)
+* **Single Public Ingress**: Implemented in **Golang** for minimal memory footprint and maximum throughput. Microservice ports (:4501–:4600) are completely isolated from public access.
+* **Deterministic Prefix Routing**:
+  * `/v1/*`: Public REST endpoints for client applications.
+  * `/internal/v1/*`: Secure authenticated endpoints for web portals and mobile dashboards.
+  * `/worker/v1/*`: Dedicated channel for desktop worker pools and extension daemons.
+  * `/v1/media/gflow-extension/ws`: Full-duplex WebSocket hub for headless browser extension coordination.
+* **Edge Security Guard**: Centralized JWT signature validation, HttpOnly cookie governance, route-level burst rate limiting, and instant token invalidation backed by Redis.
 
 ---
 
-### 🎨 3. World Asset Management (WAM) & Creative Production Engine
-* **World Asset Management Studio ([world-assets.vercel.app](https://world-assets.vercel.app))**:
-  * Project Command Center & Pre-Production Director OS for AI animated film productions.
-  * **Character DNA & World Bible Matrix**: Centralized SSOT for character turnarounds, color scripts, and visual guidelines.
-  * **Blender MCP 2D-to-3D Pipeline**: Converts concept illustrations into textured 3D assets with automated geometry checks and camera staging.
-  * Backed by `core-asset-api` (:4505) and streaming direct uploads to Cloudflare R2.
-* **Storyboard Workflow & Flow Architect ([storyboard-workflow.vercel.app](https://storyboard-workflow.vercel.app))**:
-  * Node-based visual storyboard canvas breaking down scenes into keyframe shots.
-  * Ensures character identity consistency and automated camera motion prompt translations.
+### ⚙️ Tier 3: Domain-Driven Microservices Layer (:4501–:4600)
+* **Domain Ownership & Strict Isolation**: 12 dedicated Fastify microservices built with TypeScript. Services never write to foreign database tables directly; cross-boundary interactions occur strictly via contract APIs or NATS JetStream events.
+* **Worker Pool & Account Rotation (`core-worker-pool-api` :4508)**: Isolates browser session cookies, account pool allocations, and native LLM API keys from standard user identities in `core-account-api`.
+* **Centralized Job Engine (`core-job-api` :4506)**: Manages stateful asynchronous job lifecycles with idempotency guarantees and automatic sweeper routines for failed jobs.
+* **AI Creative Spine (`core-asset-api` :4505 & `core-media-api` :4501)**: Coordinates narrative scripts, character DNA matrices, and asset generation pipelines.
 
 ---
 
-### 🔍 4. CodeGraph AST Intelligence & Blast Radius Engineering
-* **Zero Blind Search Philosophy**: Replaced legacy text grepping with AST graph analysis:
-  * `codegraph_flow`: Traces upstream callers and downstream callees across multi-service boundaries.
-  * `codegraph_impact`: Calculates the blast radius of any symbol modification prior to merging.
-  * `codegraph_affected_tests`: Dynamically discovers and executes only tests covering the diff, slashing test execution time by 90%+.
-  * `codegraph_db_touches`: Audits all functions interacting with Prisma models and raw SQL queries.
-  * `codegraph_unused_exports`: Safely detects and purges dead code and dangling exports.
+### 💾 Tier 4: Event Streaming & Persistent Data Plane
+* **NATS JetStream Distributed Bus**: Persistent disk-backed streaming (`-sd /data`) powering event-driven workflows: job state transitions, attendance log ingestion, asset rendering notifications, and LMS progress updates.
+* **Transactional Outbox Pattern**: Eliminates dual-write inconsistencies between PostgreSQL database transactions and event message publishing.
+* **Prisma SSOT Database Architecture**: Single source of truth defined in `0-Shared-Libs/prisma-client/prisma/schema.prisma`. Pooled via **PgBouncer** to handle high-concurrency connection spikes cleanly.
+* **Cloudflare R2 Object Storage**: High-speed, zero-egress-fee distributed media storage integrated with pre-signed upload URLs and Cloudflare CDN caching.
 
 ---
 
-### 📚 5. SOTA Vertical-Tree RAG & Code Anchors
-* **Hybrid Graph-Tree RAG Architecture**:
-  * **Data Plane (LlamaIndex & pgvector)**: Hierarchical node parsing (File $\rightarrow$ Class/Route $\rightarrow$ Chunk) with recursive summarization (RAPTOR) stored in PostgreSQL with HNSW indexing.
-  * **Control Plane (LangGraph StateGraph)**: State machines executing Corrective RAG (CRAG) with relevance grading, AST dependency fallback, and automated hallucination verification.
-* **Ground-Truth Code Anchors**: Documents contain verifiable code anchors (`symbol @ file:line`), allowing AI agents to navigate directly to the target line in sub-second time without exploration overhead.
-* **Continuous Self-Improvement Loop**:
-  * Captures real-world incident postmortems using `storymee_rag_record_lesson`.
-  * RLAIF & DPO (Direct Preference Optimization): Automatically labels retrieved chunks based on test results (`chosen` on test pass, `rejected` on test fail) to fine-tune rerankers (`bge-reranker-large`).
-
----
-
-### 🌐 6. Distributed Microservices & Edge Infrastructure (StoryMee V2)
-* **Go API Gateway (`storymee-hub` :5100)**: Single entry point for all client traffic. Enforces Edge Guard policies, rate limiting, and centralized Redis token revocation.
-* **12 Fastify Microservices**:
-  * `core-media-api` (:4501) · `core-account-api` (:4502) · `core-team-api` (:4503) · `core-system-api` (:4504)
-  * `core-asset-api` (:4505 - World Asset Engine) · `core-job-api` (:4506) · `core-billing-api` (:4507) · `core-worker-pool-api` (:4508)
-  * `core-lms-api` (:4509) · `core-notification-api` (:4512) · `core-gamification-api` (:4513) · `core-ai-api` (:4600)
-* **Prisma SSOT**: Centralized data modeling in `0-Shared-Libs/prisma-client`, ensuring zero-drift migrations across all microservices.
-* **Asynchronous Messaging**: NATS JetStream with persistent streams (`-sd /data`), transactional outbox pattern, and Redis Pub/Sub.
-* **Cloudflare Infrastructure**: Cloudflare R2 object storage with pre-signed URLs and Zero Trust secure tunnels.
-
----
-
-## 🌟 Flagship Production Projects & Showcases
-
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🏢 <a href="https://storymee-team.vercel.app">StorymeeTeam Operating Portal</a></h3>
-      <p><b>Enterprise Operations Hub & Real-Time Biometrics</b></p>
-      <ul>
-        <li>Real-time attendance ingestion from physical ZKTeco biometric hardware to PostgreSQL.</li>
-        <li>Dark Glassmorphism dashboard with Kanban task management, two-tier review loops, and payroll calculation.</li>
-        <li>One-click Instant Admin Preview for friction-free evaluation.</li>
-      </ul>
-      <p><code>Next.js 16 (Turbopack)</code> · <code>Fastify</code> · <code>PostgreSQL</code> · <code>Prisma</code> · <code>TailwindCSS</code></p>
-    </td>
-    <td width="50%" valign="top">
-      <h3>🎨 <a href="https://world-assets.vercel.app">World Asset Studio (WAM)</a></h3>
-      <p><b>Project Command Center & 2D-to-3D Pipeline</b></p>
-      <ul>
-        <li>Character DNA & World Bible Matrix for AI animated film productions.</li>
-        <li>Automated 2D turnaround to 3D mesh transformation via Blender MCP.</li>
-        <li>High-resolution asset X-Ray, tagging, and direct Cloudflare R2 synchronization.</li>
-      </ul>
-      <p><code>React</code> · <code>Blender MCP</code> · <code>core-asset-api :4505</code> · <code>Cloudflare R2</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🎬 <a href="https://storyboard-workflow.vercel.app">Storyboard Workflow Engine</a></h3>
-      <p><b>Generative AI Filmmaking Shot Planner</b></p>
-      <ul>
-        <li>Node-based visual canvas breaking down narrative scripts into shots.</li>
-        <li>Character consistency keyframe mapping and automated camera motion translation.</li>
-      </ul>
-      <p><code>AI Filmmaking</code> · <code>Prompt Architecture</code> · <code>Node Graphs</code> · <code>Next.js</code></p>
-    </td>
-    <td width="50%" valign="top">
-      <h3>🤖 <a href="https://github.com/zuzziQ/AI-Task-Manager">AI-Task-Manager Bot</a></h3>
-      <p><b>Autonomous Asynchronous Task Dispatcher</b></p>
-      <ul>
-        <li>Natural language Telegram bot powered by Google Gemini (Gemma 4 31B) with structured parsing.</li>
-        <li>Bi-directional synchronization between Plane.so API and Google Sheets v4.</li>
-        <li>Dual-loop review state machine with non-blocking asynchronous job workers.</li>
-      </ul>
-      <p><code>Python 3.11</code> · <code>Google Gemini</code> · <code>Plane.so API</code> · <code>Telegram Bot</code> · <code>Docker</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>⚡ <a href="https://github.com/zuzziQ/universal-ai-extension">Universal AI Creative Extension</a></h3>
-      <p><b>Headless Multi-Provider Creative Automation Engine</b></p>
-      <ul>
-        <li>Automates generative AI pipelines across Dreamina, Google Flow, and Higgsfield platforms.</li>
-        <li>Manifest V3 background worker architecture with resilient session keep-alive and captcha mitigation.</li>
-        <li>Automated asset harvesting and streaming upload directly to Cloudflare R2 buckets.</li>
-      </ul>
-      <p><code>TypeScript</code> · <code>Manifest V3</code> · <code>Chrome Extensions</code> · <code>Cloudflare R2</code></p>
-    </td>
-    <td width="50%" valign="top">
-      <h3>🎮 <a href="https://app.aikid.vn">AIKids EdTech Platform</a></h3>
-      <p><b>Interactive Gamified Learning Client</b></p>
-      <ul>
-        <li>Interactive gamified client featuring Aiki Islands with dynamic audio and visual narration.</li>
-        <li>Child Psychology Guardrails: Real-time stimulus threshold monitoring and cognitive pacing control.</li>
-        <li>Optimized for low-bandwidth mobile environments with zero layout shift.</li>
-      </ul>
-      <p><code>Next.js 14 App Router</code> · <code>TypeScript</code> · <code>TailwindCSS</code> · <code>EdTech Architecture</code></p>
-    </td>
-  </tr>
-</table>
+### 🧠 Tier 5: Autonomous AI Agentic Control & SOTA Context Plane
+* **Supreme Orchestrator (Google Antigravity SDK & IDE)**: Manages multi-agent lifecycles, specialized sub-agent handoffs, and deterministic tool execution pipelines.
+* **Lean SDLC 2.0 Execution Engine**:
+  1. **Thinking**: Consults the Vertical-Tree RAG router to resolve canonical SSOT paths and exact code anchors in a single step.
+  2. **Acting**: Executes surgical code modifications (single-agent first; sub-agent swarms for decoupled parallel tasks).
+  3. **Observing (Inner Loop)**: Runs targeted tests or AST diff assertions. Failures automatically trigger up to 2 internal self-healing cycles before alerting the engineer.
+  4. **Reflecting**: Emits a compact handoff contract ($\le 5$ lines) stating status, modified files, verification evidence, and residual risks.
+* **SOTA Vertical-Tree RAG System**:
+  * **Data Plane**: Hierarchical AST parsing and recursive summarization (RAPTOR) stored in PostgreSQL with `pgvector` HNSW index.
+  * **Control Plane**: LangGraph StateGraph orchestrating Corrective RAG (CRAG) with relevance grading and hallucination verification.
+  * **Ground-Truth Code Anchors**: Architectural specifications link directly to exact code locations (`symbol @ file:line`), preventing hallucinations and blind exploratory searches.
+  * **Self-Evolving Loop**: Real-world incident postmortems recorded via `storymee_rag_record_lesson`; reranker weights iteratively optimized using Direct Preference Optimization (DPO).
+* **CodeGraph AST Intelligence**: Eliminates full-text grepping with AST graph analysis (`codegraph_flow`, `codegraph_impact`, `codegraph_affected_tests`, `codegraph_db_touches`).
 
 ---
 
