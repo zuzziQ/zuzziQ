@@ -10,7 +10,8 @@
   <a href="https://world-assets.vercel.app"><img src="https://img.shields.io/badge/Live_Studio-World_Assets_(WAM)-8b5cf6?style=for-the-badge&logo=blender&logoColor=white" alt="World Assets WAM"/></a>
   <a href="https://storyboard-workflow.vercel.app"><img src="https://img.shields.io/badge/Live_App-Storyboard_Workflow-ec4899?style=for-the-badge&logo=node.js&logoColor=white" alt="Storyboard Workflow"/></a>
   <a href="https://app.aikid.vn"><img src="https://img.shields.io/badge/Live_Web-AIKids_EdTech-10b981?style=for-the-badge&logo=safari&logoColor=white" alt="AIKids LMS"/></a>
-  <a href="https://t.me/mlq007"><img src="https://img.shields.io/badge/Telegram-@mlq007-0088cc?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram"/></a>
+  <a href="https://t.me/StoryMeeBot"><img src="https://img.shields.io/badge/Live_Bot-@StoryMeeBot-0088cc?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Task Bot"/></a>
+  <a href="https://t.me/mlq007"><img src="https://img.shields.io/badge/Contact-@mlq007-229ED9?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram"/></a>
 </p>
 
 ---
@@ -37,7 +38,7 @@ All systems below are actively deployed and available for live preview:
 | **World Asset Management (WAM)** | 🎨 [world-assets.vercel.app](https://world-assets.vercel.app) | React, Vite, Blender MCP, `core-asset-api` | Project Command Center, Character DNA, World Bible Matrix, 2D-to-3D asset pipeline |
 | **Storyboard Workflow** | 🎬 [storyboard-workflow.vercel.app](https://storyboard-workflow.vercel.app) | Node Canvas, Next.js, AI Storyboard Engine | Visual shot planner, prompt continuity keyframing for AI filmmaking |
 | **AIKids EdTech Platform** | 🎮 [app.aikid.vn](https://app.aikid.vn) | Next.js 14 App Router, TailwindCSS | Interactive gamified learning client with child psychology stimulus guardrails |
-| **AI-Task-Manager Bot** | 🤖 [GitHub Repository](https://github.com/zuzziQ/AI-Task-Manager) | Python 3.11, Google Gemini, Plane.so API | Natural language Telegram bot with dual-loop review state machine & Sheets sync |
+| **AI-Task-Manager Bot** | 🤖 [t.me/StoryMeeBot](https://t.me/StoryMeeBot) (Live Bot) · [Repo](https://github.com/zuzziQ/AI-Task-Manager) | Python 3.11, Google Gemini, Plane.so API | Telegram bot điều phối task tự động, dual-loop review state machine & Sheets sync |
 | **Universal AI Extension** | ⚡ [GitHub Repository](https://github.com/zuzziQ/universal-ai-extension) | TypeScript, Chrome MV3, Cloudflare R2 | Headless multi-provider automation for Dreamina, Google Flow, and Higgsfield |
 
 ---
